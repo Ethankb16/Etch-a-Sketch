@@ -1,0 +1,124 @@
+body {
+    font-family: Marker Felt, fantasy;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom right, #FDFCFB, #E2D1C3);
+}
+h1.title {
+    font-family: Marker Felt, fantasy;
+    position: relative;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    color: #AAAAAA;
+    text-shadow: 2px 2px 4px #000000;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    z-index: 1;
+}
+#wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 600px;
+    border: 1px solid black;
+}
+
+.grid-square {
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    border: 1px solid black;
+    transition: background-color 0.3s;
+}
+
+.grid-square.active {
+    background-color: black;
+}
+#controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    color: #AAAAAA;
+    border: none;
+    border-radius: 5px;
+}
+#controls button {
+    font-family: Marker Felt, fantasy;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #AAAAAA;
+    color: #333;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.color-picker {
+    margin-bottom: 10px;
+  } 
+.color-picker-label {
+    display: inline-block;
+    text-shadow: 2px 2px 2px #000000;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  #btn-eraser.active {
+    background-color: black;
+    color: white;
+  }
+input[type="color"] {
+    appearance: none;
+    width: 200px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  } 
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    margin-top: 10px;
+  }
+  @media only screen and (max-width: 768px) {
+    #container {
+      width: 100%;
+      height: auto;
+      max-width: 600px;
+      max-height: 600px;
+    }
+    .grid-square {
+      width: calc(100% / 16);
+      height: calc(100% / 16);
+    }
+  }
